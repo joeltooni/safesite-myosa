@@ -544,7 +544,7 @@ Due to the power supply constraints mentioned above, we were unable to integrate
 
 ### **8. Faulty MPU6050 Accelerometer/Gyroscope**
 
-The accelerometer and gyroscope data from our MPU6050 sensor was extremely inconsistent and unreliable. Despite implementing smoothing filters, the raw readings were erratic. We kept logs of the sensor data (`.txt` files) for review and analysis. We suspect the sensor module may be faulty and plan to purchase a replacement in early January 2026.
+The accelerometer and gyroscope data from our MPU6050 sensor was extremely inconsistent and unreliable. Despite implementing smoothing filters, the raw readings were erratic. We suspect the sensor module may be faulty and plan to purchase a replacement in early January 2026.
 
 ### **9. Fall Detection Postponed**
 
