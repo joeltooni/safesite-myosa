@@ -529,6 +529,22 @@ Coordinating MQTT messages between ESP32 devices and the web dashboard required 
 
 Initially, the dashboard played alert sounds for all alerts including admin-sent ones. We refined the logic to only play sounds for **incoming panic alerts from workers**, not for outgoing admin alerts.
 
+### **6. Power Supply Issues**
+
+We needed to power the ESP32 from a 7.4V battery for portable operation. We initially planned to use an **MT3608 DC-DC converter**, but discovered it could only **step-up voltage**, not step-down as we needed (7.4V → 5V). As a workaround, we had to use a power bank for portable demos, limiting our battery integration plans.
+
+### **7. Gas Sensor Integration Blocked**
+
+Due to the power supply constraints mentioned above, we were unable to integrate the **MQ135 air quality/gas sensor** we had prepared. This sensor requires stable 5V power which we couldn't reliably provide from our intended battery setup.
+
+### **8. Faulty MPU6050 Accelerometer/Gyroscope**
+
+The accelerometer and gyroscope data from our MPU6050 sensor was extremely inconsistent and unreliable. Despite implementing smoothing filters, the raw readings were erratic. We kept logs of the sensor data (`.txt` files) for review and analysis. We suspect the sensor module may be faulty and plan to purchase a replacement in early January 2026.
+
+### **9. Fall Detection Postponed**
+
+Due to the unreliable MPU6050 data, we were unable to implement the **fall detection edge ML algorithm** we had planned. Accurate fall detection requires consistent, trustworthy accelerometer readings to train and run the model. This feature will be revisited once we have a functioning sensor.
+
 ---
 
 ## Contact
