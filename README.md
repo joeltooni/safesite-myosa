@@ -140,7 +140,7 @@ Workers can trigger an immediate emergency alert by pressing a physical panic bu
 - Alert type (panic)
 - Severity level (critical)
 - Timestamp
-- Location (GPS ready for future)
+- Location (GPS ready for later integration)
 
 ### **3. Admin-to-Worker Communication**
 
@@ -178,7 +178,7 @@ Advanced motion analysis for safety monitoring.
 - Motion status (YES/NO) based on accelerometer activity
 - Tilt angles (X, Y, Z) in degrees
 - Gyroscope readings for rotation detection
-- Potential fall detection (based on sudden acceleration changes)
+- Fall detection (based on sudden acceleration changes)
 
 ### **6. Data Logging & Export**
 
@@ -212,15 +212,19 @@ Monitor multiple workers simultaneously from a single interface.
 **Step 1: Start Mosquitto MQTT Broker**
 
 ```bash
+# Windows - run from Mosquitto installation folder (usually C:\Program Files\mosquitto)
+mosquitto -v
+
+# Or if added to PATH, run from any terminal:
 mosquitto -v
 ```
 
 **Step 2: Start Backend Server**
 
 ```bash
-cd safesite-dashboard/backend
+cd safesite-dashboard
 npm install
-node server.js
+npm start
 ```
 
 **Step 3: Start Frontend Development Server**
@@ -338,18 +342,22 @@ cd safesite-dashboard/frontend
 npm install
 ```
 
-**MQTT Broker:**
+**MQTT Broker (Windows):**
+
+1. Download Mosquitto from: <https://mosquitto.org/download/>
+2. Run the installer (e.g., `mosquitto-2.0.18-install-windows-x64.exe`)
+3. During installation, note the install path (default: `C:\Program Files\mosquitto`)
+4. To start Mosquitto, open Command Prompt as Administrator and run:
 
 ```bash
-# Windows (using Chocolatey)
-choco install mosquitto
+# Navigate to Mosquitto folder
+cd "C:\Program Files\mosquitto"
 
-# macOS
-brew install mosquitto
-
-# Linux
-sudo apt install mosquitto mosquitto-clients
+# Start the broker in verbose mode
+mosquitto -v
 ```
+
+**Tip:** To run Mosquitto from any terminal, add `C:\Program Files\mosquitto` to your system PATH environment variable.
 
 ---
 
