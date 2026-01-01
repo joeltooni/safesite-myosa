@@ -551,8 +551,7 @@ Due to the unreliable MPU6050 data, we were unable to implement the **fall detec
 
 For questions, suggestions, or collaboration:
 
-- **Email**: <dev.myosa@gmail.com>
-- **MYOSA Community**: [MYOSA Platform](https://drive.google.com/file/d/1On6kzIq3ejcu9aMGr2ZB690NnFrXG2yO/view)
+- **Email**: jadebayo@andrew.cmu.edu
 
 ---
 
