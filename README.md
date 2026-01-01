@@ -450,37 +450,17 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
 
 ---
 
-## Contribution Notes
+## Next Steps
 
-Contributions are welcome! Here's how you can help:
+Future enhancements planned for SafeSite:
 
-**Bug Reports:**
-
-- Open an issue describing the bug
-- Include steps to reproduce
-- Attach screenshots if applicable
-
-**Feature Requests:**
-
-- Open an issue with the "enhancement" label
-- Describe the feature and its use case
-
-**Code Contributions:**
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-**Future Enhancements Planned:**
-
-- GPS location tracking
-- Fall detection algorithm
-- Gas/toxic sensor integration
-- Mobile app for workers
-- Historical data analytics
-- Multi-language support
+- **Fall Detection Algorithm** - Implement edge ML-based fall detection to automatically alert supervisors when a worker falls
+- **Gas/Toxic Sensor Integration** - Add MQ135 air quality monitoring for hazardous environment detection
+- **3D Printing Enclosure** - Design and print a compact, wearable enclosure for the sensor modules
+- **Battery-Powered Operation** - Integrate proper voltage regulation (step-down converter) for portable battery use
+- **Replacing the MPU6050 Sensor** - Purchase and install a reliable accelerometer/gyroscope module to replace the faulty unit
+- **Further Bug Checks** - Comprehensive testing and debugging of the dashboard and firmware
+- **Testing with a Second Hardware** - Validate multi-worker monitoring by deploying a second ESP32 device
 
 ---
 
