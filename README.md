@@ -91,7 +91,9 @@ In busy factory settings, workers operate heavy machinery, work near hazardous e
 
 **Full Demo Video:**
 
-[📺 Watch the SafeSite Demo Video (MYOSA_FINAL.mp4)](MYOSA_FINAL.mp4)
+<video controls width="100%">
+  <source src="MYOSA_FINAL.mp4" type="video/mp4">
+</video>
 
 ---
 
