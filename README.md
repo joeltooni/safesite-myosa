@@ -389,26 +389,45 @@ safesite-dashboard/
 ## Hardware Connection Diagram
 
 ```
-                 ESP32 Controller Board
-                 ┌─────────────────────┐
-                 │  3.3V  GND  SDA SCL │
-                 └──┬────┬────┬────┬──┘
-                    │    │    │    │
-    ┌───────────────┼────┼────┼────┼───────────────┐
-    │               │    │    │    │               │
-┌───▼───┐      ┌───▼───▼───▼───▼───┐      ┌───────▼───────┐
-│ OLED  │      │   I2C Sensor Bus  │      │ Panic Button  │
-│Display│      │                   │      │   GPIO 33     │
-└───────┘      │ ┌─────┐ ┌─────┐  │      │      │        │
-               │ │Accel│ │Baro │  │      │    ──┴──      │
-               │ │Gyro │ │Press│  │      │   /    \      │
-               │ └─────┘ └─────┘  │      │  (BUTTON)     │
-               │ ┌─────┐ ┌─────┐  │      │   \    /      │
-               │ │Light│ │Temp │  │      │    ──┬──      │
-               │ │Prox │ │Humid│  │      │      │        │
-               │ └─────┘ └─────┘  │      │     GND       │
-               └──────────────────┘      └───────────────┘
+                      ESP32 Controller Board
+                 ┌──────────────────────────────┐
+                 │  3.3V  GND  SDA  SCL  D4  D33│
+                 └──┬────┬────┬────┬────┬────┬──┘
+                    │    │    │    │    │    │
+    ┌───────────────┼────┼────┼────┼────┼────┼───────────────┐
+    │               │    │    │    │    │    │               │
+┌───▼───┐      ┌───▼───▼───▼───▼───┐    │    │      ┌───────▼───────┐
+│ OLED  │      │   I2C Sensor Bus  │    │    │      │ Panic Button  │
+│Display│      │                   │    │    │      │   GPIO 33     │
+└───────┘      │ ┌─────┐ ┌─────┐  │    │    │      │      │        │
+               │ │Accel│ │Baro │  │    │    │      │    ──┴──      │
+               │ │Gyro │ │Press│  │    │    │      │   /    \      │
+               │ └─────┘ └─────┘  │    │    │      │  (BUTTON)     │
+               │ ┌─────┐ ┌─────┐  │    │    │      │   \    /      │
+               │ │Light│ │Temp │  │    │    │      │    ──┬──      │
+               │ │Prox │ │Humid│  │    │    │      │      │        │
+               │ └─────┘ └─────┘  │    │    │      │     GND       │
+               └──────────────────┘    │    │      └───────────────┘
+                                       │    │
+                               ┌───────▼────▼───────┐
+                               │      Buzzer        │
+                               │      GPIO 4        │
+                               │                    │
+                               │    (+)     (-)     │
+                               │     │       │      │
+                               │   GPIO 4   GND     │
+                               └────────────────────┘
 ```
+
+**Pin Summary:**
+
+| Component | GPIO Pin | Connection |
+|-----------|----------|------------|
+| OLED Display | I2C (SDA/SCL) | GPIO 21 / GPIO 22 |
+| Sensors (All) | I2C Bus | GPIO 21 / GPIO 22 |
+| Panic Button | GPIO 33 | Button to GND (internal pull-up) |
+| Buzzer | GPIO 4 (D4) | (+) to GPIO 4, (-) to GND |
+| Built-in LED | GPIO 2 | On-board |
 
 ---
 
