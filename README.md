@@ -95,6 +95,8 @@ In busy factory settings, workers operate heavy machinery, work near hazardous e
   <source src="/MYOSA_FINAL.mp4" type="video/mp4">
 </video>
 
+[📺 Click here to download/view the demo video](MYOSA_FINAL.mp4)
+
 ---
 
 ## Features (Detailed)
