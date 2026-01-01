@@ -351,46 +351,37 @@ sudo apt install mosquitto mosquitto-clients
 ## File Structure
 
 ```
-/MYOSA
-├── code_safesite.ino          # Main ESP32 firmware
-├── src/
-│   ├── myosa.cpp              # MYOSA library implementation
-│   ├── myosa.h                # MYOSA library header
-│   └── ...                    # Other library files
-├── safesite-dashboard/
-│   ├── backend/
-│   │   ├── server.js          # Express server entry point
-│   │   ├── db.js              # SQLite database operations
-│   │   ├── mqtt-handler.js    # MQTT message handling
-│   │   ├── routes/
-│   │   │   ├── auth.js        # Authentication routes
-│   │   │   ├── workers.js     # Worker CRUD routes
-│   │   │   ├── alerts.js      # Alert management routes
-│   │   │   └── logs.js        # Log export routes
-│   │   └── simulation/
-│   │       └── dataGenerator.js  # Simulated sensor data
-│   └── frontend/
-│       ├── public/
-│       │   ├── index.html
-│       │   ├── favicon.svg
-│       │   └── sounds/
-│       │       └── alert.mp3
-│       └── src/
-│           ├── App.jsx
-│           ├── index.js
-│           └── components/
-│               ├── Dashboard.jsx
-│               ├── WorkerCard.jsx
-│               ├── DetailPanel.jsx
-│               ├── Login.jsx
-│               ├── CreateWorkerModal.jsx
-│               └── AlertNotification.jsx
-└── safesite-submission/
-    ├── safesite-worker-safety-monitor.md
-    ├── safesite-cover.jpg
-    ├── safesite-dashboard.jpg
-    ├── safesite-demo.mp4
-    └── ...
+safesite-dashboard/
+├── backend/
+│   ├── server.js              # Express server entry point
+│   ├── db.js                  # SQLite database operations
+│   ├── mqtt-handler.js        # MQTT message handling
+│   ├── routes/
+│   │   ├── auth.js            # Authentication routes
+│   │   ├── workers.js         # Worker CRUD routes
+│   │   ├── alerts.js          # Alert management routes
+│   │   └── logs.js            # Log export routes
+│   └── simulation/
+│       └── dataGenerator.js   # Simulated sensor data
+├── frontend/
+│   ├── public/
+│   │   ├── index.html
+│   │   ├── favicon.svg
+│   │   └── sounds/
+│   │       └── alert.mp3
+│   └── src/
+│       ├── App.jsx            # Main application component
+│       ├── index.js           # React entry point
+│       ├── index.css          # Tailwind CSS styles
+│       └── components/
+│           ├── Dashboard.jsx          # Main dashboard view
+│           ├── WorkerCard.jsx         # Worker status cards
+│           ├── DetailPanel.jsx        # Sensor detail charts
+│           ├── Login.jsx              # Authentication screen
+│           ├── CreateWorkerModal.jsx  # Add new worker modal
+│           └── AlertNotification.jsx  # Alert popup component
+├── package.json               # Root dependencies
+└── README.md                  # Project documentation
 ```
 
 ---
