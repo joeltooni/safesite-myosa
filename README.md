@@ -486,6 +486,32 @@ Contributions are welcome! Here's how you can help:
 
 ---
 
+## Challenges Faced
+
+During the development of SafeSite, we encountered several technical challenges:
+
+### **1. Sensor Data Noise**
+
+Raw accelerometer and gyroscope readings were too noisy for reliable motion detection. We solved this by implementing a **10-sample moving average filter** that smooths the data while maintaining responsiveness.
+
+### **2. Button Debouncing**
+
+The panic button initially triggered multiple alerts from a single press due to electrical bounce. We implemented proper **software debouncing** with a separate debounced state variable to ensure reliable single-press detection.
+
+### **3. Worker Disconnect Detection**
+
+Hardware workers would show as "online" even after being powered off. We added a **heartbeat timeout system** that marks workers offline if no data is received for 15 seconds.
+
+### **4. Real-Time Communication**
+
+Coordinating MQTT messages between ESP32 devices and the web dashboard required careful topic structure design and ensuring Socket.io properly relays updates to the frontend in real-time.
+
+### **5. Alert Sound Management**
+
+Initially, the dashboard played alert sounds for all alerts including admin-sent ones. We refined the logic to only play sounds for **incoming panic alerts from workers**, not for outgoing admin alerts.
+
+---
+
 ## Contact
 
 For questions, suggestions, or collaboration:
