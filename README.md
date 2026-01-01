@@ -550,6 +550,10 @@ The accelerometer and gyroscope data from our MPU6050 sensor was extremely incon
 
 Due to the unreliable MPU6050 data, we were unable to implement the **fall detection edge ML algorithm** we had planned. Accurate fall detection requires consistent, trustworthy accelerometer readings to train and run the model. This feature will be revisited once we have a functioning sensor.
 
+### **10. Form Factor Limitations**
+
+The current MYOSA kit occupies a significant amount of space, making it challenging to create a compact, wearable safety device suitable for factory workers. Each sensor module takes up approximately **30% of the total area**, resulting in a bulky prototype. For future iterations, we recommend reducing the sensor module sizes or integrating multiple sensors onto a single compact PCB to enable truly wearable form factors.
+
 ---
 
 ## Contact
