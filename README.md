@@ -78,6 +78,11 @@ In busy factory settings, workers operate heavy machinery, work near hazardous e
 </p>
 
 <p align="center">
+  <img src="/safesite-detail-panel.png" width="800"><br/>
+  <i>Worker Detail Panel - Real-time sensor data and charts when a worker card is selected</i>
+</p>
+
+<p align="center">
   <img src="/safesite-hardware.jpeg" width="800"><br/>
   <i>MYOSA ESP32 hardware setup - Wearable sensor unit for factory workers</i>
 </p>
@@ -551,7 +556,7 @@ Due to the unreliable MPU6050 data, we were unable to implement the **fall detec
 
 For questions, suggestions, or collaboration:
 
-- **Email**: jadebayo@andrew.cmu.edu
+- **Email**: <jadebayo@andrew.cmu.edu>
 
 ---
 
