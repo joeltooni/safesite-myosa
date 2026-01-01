@@ -393,6 +393,11 @@ safesite-dashboard/
 
 ## Hardware Connection Diagram
 
+<p align="center">
+  <img src="/safesite-hardware-diagram.jpg" width="800"><br/>
+  <i>SafeSite Hardware Wiring Diagram</i>
+</p>
+
 ```
                       ESP32 Controller Board
                  ┌──────────────────────────────┐
