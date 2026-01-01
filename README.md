@@ -251,7 +251,10 @@ const char *password = "YOUR_WIFI_PASSWORD";
 const char *mqtt_server = "YOUR_PC_IP_ADDRESS";
 ```
 
-1. Upload to ESP32
+1. Configure Arduino IDE settings:
+   - **Board:** ESP32 Dev Module
+   - **Partition Scheme:** Huge APP (3MB No OTA/1MB SPIFFS)
+2. Upload to ESP32
 
 **Step 5: Access Dashboard**
 Open browser and navigate to:
