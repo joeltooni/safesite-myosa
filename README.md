@@ -1,18 +1,12 @@
----
-publishDate: 2026-01-01T00:00:00Z
-title: SafeSite - IoT Factory Worker Safety Monitoring System
-excerpt: A real-time factory worker safety monitoring system using ESP32 and MYOSA sensors with a web-based dashboard for manufacturing floor safety management.
-image: safesite-cover.png
-tags:
-  - IoT
-  - Factory-Safety
-  - ESP32
-  - MQTT
-  - React
-  - Real-Time-Monitoring
-  - MYOSA
-  - Manufacturing
----
+<p align="center">
+  <img src="safesite-cover.png" width="800"/>
+</p>
+
+# SafeSite - IoT Factory Worker Safety Monitoring System
+
+**A real-time factory worker safety monitoring system using ESP32 and MYOSA sensors with a web-based dashboard for manufacturing floor safety management.**
+
+![IoT](https://img.shields.io/badge/IoT-blue) ![Factory-Safety](https://img.shields.io/badge/Factory--Safety-orange) ![ESP32](https://img.shields.io/badge/ESP32-green) ![MQTT](https://img.shields.io/badge/MQTT-purple) ![React](https://img.shields.io/badge/React-61DAFB) ![MYOSA](https://img.shields.io/badge/MYOSA-red)
 
 > Protecting factory workers through real-time sensor monitoring and instant alert communication.
 
